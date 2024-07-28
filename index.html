@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Your Smoothie</h1>
+        <form id="smoothieForm">
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="Small" data-price="3">Small ($3)</option>
+                <option value="Medium" data-price="5">Medium ($5)</option>
+                <option value="Large" data-price="7">Large ($7)</option>
+            </select>
+            <br><br>
+
+            <label for="base">Base:</label>
+            <select id="base" name="base" required>
+                <option value="Water" data-price="0">Water ($0)</option>
+                <option value="Milk" data-price="1">Milk ($1)</option>
+                <option value="Almond milk" data-price="1.5">Almond Milk ($1.5)</option>
+                <option value="Soy milk" data-price="1.5">Soy Milk ($1.5)</option>
+                <option value="Juice" data-price="2">Juice ($2)</option>
+            </select>
+            <br><br>
+
+            <label for="ingredients">Ingredients:</label>
+            <div class="checkbox-container">
+                <input type="checkbox" id="banana" name="ingredients" value="Banana" data-price="0.5">
+                <label for="banana">Banana ($0.5)</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="strawberry" name="ingredients" value="Strawberry" data-price="0.7">
+                <label for="strawberry">Strawberry ($0.7)</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="blueberry" name="ingredients" value="Blueberry" data-price="0.6">
+                <label for="blueberry">Blueberry ($0.6)</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="spinach" name="ingredients" value="Spinach" data-price="0.4">
+                <label for="spinach">Spinach ($0.4)</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="kale" name="ingredients" value="Kale" data-price="0.5">
+                <label for="kale">Kale ($0.5)</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="mango" name="ingredients" value="Mango" data-price="0.8">
+                <label for="mango">Mango ($0.8)</label>
+            </div>
+            <br><br>
+
+            <label for="sweetener">Sweetener:</label>
+            <select id="sweetener" name="sweetener" required>
+                <option value="None" data-price="0">None ($0)</option>
+                <option value="Sugar" data-price="0.2">Sugar ($0.2)</option>
+                <option value="Honey" data-price="0.3">Honey ($0.3)</option>
+                <option value="Stevia" data-price="0.4">Stevia ($0.2)</option>
+            </select>
+            <br><br>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+            <br><br>
+
+            <button type="button" id="orderButton">Order</button>
+        </form>
+        <div id="orderSummary"></div>
+        <div id="smoothieImage"></div>
+        <div id="bill"></div>
+        <div id="funElement"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
